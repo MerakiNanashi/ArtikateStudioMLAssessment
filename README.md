@@ -1,6 +1,5 @@
-# ArtikateStudioMLAssessment
-
 # Setup Guide — Legal Contract RAG System (For folder Task02-RAGPipeline)
+---
 
 ## Prerequisites
 
@@ -212,3 +211,53 @@ The `all-mpnet-base-v2` model is downloaded on first use (~420 MB). Subsequent r
 **`faiss` import error on Apple Silicon**
 Install via conda instead of pip: `conda install -c conda-forge faiss-cpu`.
 
+
+---
+
+# Setup Guide — Ticket Classification (Section 03)
+
+---
+
+## Overview
+
+This project implements a real-time customer support ticket classifier under strict production constraints defined in the assessment :contentReference[oaicite:0]{index=0}.
+
+The system classifies tickets into:
+- billing  
+- technical_issue  
+- feature_request  
+- complaint  
+- other  
+
+The solution uses a fine-tuned DistilBERT model optimized for:
+- low latency (<500ms on CPU)  
+- deterministic outputs  
+- local inference (no API dependency)  
+
+---
+
+## Project Structure
+
+project/  
+├── data/  
+│ └── customer_support_tickets_200k.csv  
+├── fine_tuned_model_v1/  
+├── main.ipynb     
+└── README.md
+
+---
+
+## Set Up:
+
+1.  Install Dependencies
+
+pip install torch transformers scikit-learn pandas numpy tqdm jupyter
+or 
+Uncomment line 1 in main.ipynb
+
+2. Running the Notebook
+Step 1 — Launch Jupyter
+
+3. Step 2 — Execute Cells Sequentially from code block 1-3, skip code block 4, then the rest sequentially again.
+
+Note: *No need to generate labelled data again.
