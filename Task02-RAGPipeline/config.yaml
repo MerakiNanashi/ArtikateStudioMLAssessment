@@ -1,0 +1,12 @@
+embedding_model: text-embedding-3-large
+llm_model: gpt-4o
+
+chunk_size: 512
+chunk_overlap: 64
+
+top_k: 5
+rerank_k: 3
+
+faiss_index_path: "faiss.index"
+data_path: "data"
+subdata_path: "Contracts_30_English"
