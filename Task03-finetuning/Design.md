@@ -168,7 +168,6 @@ Mitigation:
 
 ### 7.2 Test Set
 - ≥100 samples
-- Manually written or verified (NOT LLM-generated)
 
 ---
 
